@@ -6,6 +6,6 @@
 ## Установка
 
 ```bash
-git clone https://github.com/твой-логин/pagges.git
+git clone https://github.com/websd64/pagges.git
 cd pagges
 python pagges.py
