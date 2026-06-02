@@ -13,24 +13,27 @@ def save():
         json.dump(a, file, indent=4)
 
 
-today_day = now.strftime("%d")
-today_month = now.strftime("%m")
-today_year = now.strftime("%Y")
-
-if today_day != a["last_day"]:
-    a["day"] = 0
-    a["last_day"] = today_day
-
-if today_month != a["last_month"]:
-    a["month"] = 0
-    a["last_month"] = today_month
-
-if today_year != a["last_year"]:
-    a["year"] = 0
-    a["last_year"] = today_year
-
 while True:
     os.system("cls" if os.name == "nt" else "clear")
+    today_day = now.strftime("%d")
+    today_month = now.strftime("%m")
+    today_year = now.strftime("%Y")
+
+    if today_day != a["last_day"]:
+        a["day"] = 0
+        a["last_day"] = today_day
+        print("Статистика за день обновлена🔄")
+
+    if today_month != a["last_month"]:
+        a["month"] = 0
+        a["last_month"] = today_month
+        print("Статистика за месяц обновлена🔄")
+
+    if today_year != a["last_year"]:
+        a["year"] = 0
+        a["last_year"] = today_year
+        print("Статистика за год обновлена🔄")
+
     print("[1] Добавить страницы")
     print("[2] Показать статистику")
     print("[3] Выход")
